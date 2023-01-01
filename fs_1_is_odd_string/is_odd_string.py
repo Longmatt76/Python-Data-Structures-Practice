@@ -29,3 +29,14 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    counter = 0
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for letter in word:
+        index = alphabet.index(letter.lower())+1
+        counter += index
+
+    if counter % 2 != 0:
+        return True
+
+    return False
